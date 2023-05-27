@@ -102,8 +102,8 @@ void Alta()
    for (int j=-1; j<i; j++)
    {if(menu[i].item==menu[j].item)
      {do{
-         printf("Numero de item no disponible");
-         scanf_s("%d",&menu[i]);
+         printf("Numero de item no disponible. Ingresa uno nuevo");
+         scanf_s("%d",&menu[i].item);
         }while(menu[i].item==menu[j].item);
    } }
 			printf("Nombre del art%cculo\n", 161);
