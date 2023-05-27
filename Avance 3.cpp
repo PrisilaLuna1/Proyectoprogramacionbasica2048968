@@ -382,18 +382,18 @@ void Archivos()
 	archivo.open(nombre.c_str(), ios::out);
 	if (archivo.fail())
 	{
-		printf("Ocurri%c un error al tratar de generar el archivo\n",162);
+		printf("Ocurri%c un error al tratar de generar el archivo\n", 162);
 		exit(1);
 	}
 	archivo << "Item" << "\t" << "\t";
-	archivo << "Nombre" << "\t" << "\t" << "\t";
-	archivo << "Año" << "\t" << "\t";
-	archivo << "Genero" << "\t" << "\t";
-	archivo << "Clasificacion" << "\t" << "\t";
-	archivo << "Consola" << "\t" << "\t";
-	archivo << "Caracteristicas" << "\t" << "\t";
-	archivo << "Descripcion" << "\t" << "\t";
-	archivo << "Precio total" << "\n";
+	archivo << "|Nombre" << "\t" << "\t" << "\t";
+	archivo << "|Año" << "\t" << "\t";
+	archivo << "|Genero" << "\t" << "\t";
+	archivo << "|Clasificacion" << "\t" << "\t";
+	archivo << "|Consola" << "\t" << "\t";
+	archivo << "|Caracteristicas" << "\t" << "\t";
+	archivo << "|Descripcion" << "\t" << "\t";
+	archivo << "|Precio total" << "\n";
 
 	for (int i = 0; i < nalta; i++)
 	{
@@ -406,23 +406,23 @@ void Archivos()
 		else
 		{
 			texto = menu[i].item;
-			archivo << texto << "\t" << "\t";
+			archivo <<texto << "\t" << "\t";
 			texto2 = menu[i].nombre;
-			archivo << texto2 << "\t" << "\t";
+			archivo << "|"<<texto2 << "\t" << "\t";
 			texto = menu[i].anio;
-			archivo << texto << "\t" << "\t";
+			archivo << "|" << texto << "\t" << "\t";
 			texto2 = menu[i].genero;
-			archivo << texto2 << "\t" << "\t";
+			archivo << "|" << texto2 << "\t" << "\t";
 			texto2 = menu[i].clasificacion;
-			archivo << texto2 << "\t" << "\t";
+			archivo << "|" << texto2 << "\t";
 			texto2 = menu[i].consola;
-			archivo << texto2 << "\t" << "\t";
+			archivo << "|" << texto2 << "\t" << "\t";
 			texto2 = menu[i].carac;
-			archivo << texto2 << "\t" << "\t";
+			archivo << "|" << texto2 << "\t" << "\t";
 			texto2 = menu[i].descripcion;
-			archivo << texto2 << "\t"<<"\t";
+			archivo << "|" << texto2 << "\t" << "\t";
 			texto3 = menu[i].precioT;
-			archivo << texto3 << "\n";
+			archivo << "|" << texto3 << "\n";
 		}
 	}
 	archivo.close();
