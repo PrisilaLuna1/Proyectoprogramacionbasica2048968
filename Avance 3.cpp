@@ -99,6 +99,13 @@ void Alta()
 			printf("Ingrese el n%cmero de item\n", 163);
 			scanf_s("%d",&menu[i].item);
 			cin.ignore();
+   for (int j=-1; j<i; j++)
+   {If(menu[i].item==menu[j].item)
+     {do{
+         printf("Numero de item no disponible")
+         scanf_s("%d",&menu[i]);
+        }while(menu[i].item==menu[j].item);
+   } }
 			printf("Nombre del art%cculo\n", 161);
 			gets_s(menu[i].nombre);
 			while (getchar() != '\n');
