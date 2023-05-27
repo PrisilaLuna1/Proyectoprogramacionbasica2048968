@@ -279,7 +279,7 @@ void Modificar()
 					if (clas == 5) { menu[i].clasificacion = "Solo adultos (+18)"; }
 					printf("----------------------------------\n");
 					if (clas < 1 || 5 < clas) { SetConsoleTextAttribute(Conh, 244); printf("Opcion no valida\n"); SetConsoleTextAttribute(Conh, 241); }
-				} while (gen < 1 || 5 < gen);
+				} while (clas < 1 || 5 < clas);
 			}
 			break;
 		case 6: //Consola
@@ -296,7 +296,7 @@ void Modificar()
 					if (con == 4) { menu[i].consola = "Steam Deck"; }
 					if (con == 5) { printf("Especificaci%cn de la consola\n", 162); getline(cin, menu[i].consola); }
 					printf("----------------------------------\n");
-					if (clas < 1 || 5 < clas) { SetConsoleTextAttribute(Conh, 244); printf("Opcion no valida\n"); SetConsoleTextAttribute(Conh, 241); }
+					if (con < 1 || 5 < con) { SetConsoleTextAttribute(Conh, 244); printf("Opcion no valida\n"); SetConsoleTextAttribute(Conh, 241); }
 				} while (con < 1 || 5 < con);
 			}
 			break;
