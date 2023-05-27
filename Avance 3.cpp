@@ -5,8 +5,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <conio.h>
-#include <Windows.h>
-#include <cctype>
+#include <Windows.h>
 
 using namespace std;
 
