@@ -106,7 +106,7 @@ void Alta()
 			printf("A%co de lanzamiento\n", 164);
 			scanf_s("%d", &menu[i].anio);
 
-			//Opciones de género
+			//Opciones de gÃ©nero
 			do {
 				printf("----------------------------------\n");
 				printf("Seleccione el g%cnero del juego\n", 130);
@@ -128,9 +128,9 @@ void Alta()
 				printf("----------------------------------\n");
 				if (gen < 1 || 7 < gen) { SetConsoleTextAttribute(Conh, 244); printf("Opcion no valida\n"); SetConsoleTextAttribute(Conh, 241); }
 			} while (gen < 1 || 7 < gen);
-			//Fin de género
+			//Fin de gÃ©nero
 
-			//opciones de clasificación
+			//opciones de clasificaciÃ³n
 			do {
 				printf("Seleccione la clasificaci%cn\n", 162);
 				printf("1. Todas las edades\n2. Todos (+10)\n3. +13\n4. +17\n5. Solo adultos (+18)\n");
@@ -143,7 +143,7 @@ void Alta()
 				if (clas == 5) { menu[i].clasificacion = "Solo adultos (+18)"; }
 				printf("----------------------------------\n");
 				if (clas < 1 || 5 < clas) { SetConsoleTextAttribute(Conh, 244); printf("Opcion no valida\n"); SetConsoleTextAttribute(Conh, 241); }
-			} while (gen < 1 || 5 < gen); //fin de clasificación
+			} while (clas < 1 || 5 < clas); //fin de clasificaciÃ³n
 
 			//opciones de consola
 			do {
@@ -217,28 +217,28 @@ void Modificar()
 	while (getchar() != '\n');
 	switch (opc)
 	{
-		case 1: //Número de item
+		case 1: //NÃºmero de item
 			for (int i = j; i == j; i++)
 			{
 				printf("Ingrese el n%cmero de item\n", 163);
 				scanf_s("%d", &menu[i].item);
 			}
 			break;
-		case 2: //Nombre del artículo
+		case 2: //Nombre del artÃ­culo
 			for (int i = j; i == j; i++)
 			{
 				printf("Nombre del art%cculo\n", 161);
 				gets_s(menu[i].nombre);
 			}
 			break;
-		case 3: //Año
+		case 3: //AÃ±o
 			for (int i = j; i == j; i++)
 			{
 				printf("A%co de lanzamiento\n", 164);
 				scanf_s("%d", &menu[i].anio);
 			}
 			break;
-		case 4: //Género
+		case 4: //GÃ©nero
 			for (int i = j; i == j; i++)
 			{
 				do {
@@ -264,7 +264,7 @@ void Modificar()
 				} while (gen < 1 || 7 < gen);
 			}
 			break;
-		case 5: //Clasificación
+		case 5: //ClasificaciÃ³n
 			for (int i = j; i == j; i++)
 			{
 				do {
@@ -300,14 +300,14 @@ void Modificar()
 				} while (con < 1 || 5 < con);
 			}
 			break;
-		case 7: //Características
+		case 7: //CaracterÃ­sticas
 			for (int i = j; i == j; i++)
 			{
 				printf("Ingrese caracter%csticas notables\n", 161);
 				gets_s(menu[i].carac);
 			}
 			break;
-		case 8: //Descripción
+		case 8: //DescripciÃ³n
 			for (int i = j; i == j; i++)
 			{
 				printf("Agregue una descripci%cn breve\n", 162);
@@ -387,7 +387,7 @@ void Archivos()
 	}
 	archivo << "Item" << "\t" << "\t";
 	archivo << "Nombre" << "\t" << "\t" << "\t";
-	archivo << "Año" << "\t" << "\t";
+	archivo << "AÃ±o" << "\t" << "\t";
 	archivo << "Genero" << "\t" << "\t";
 	archivo << "Clasificacion" << "\t" << "\t";
 	archivo << "Consola" << "\t" << "\t";
